@@ -1,6 +1,11 @@
 # flutter_app_todo
 
 A new Flutter application.
+(To Do APP)
+Add data from dialog box and populate in the list.
+Delete data with drag from the list.
+Local Sqlite database using for adding populate data in the list .
+Bloc pattern use(state management)
 
 ## Getting Started
 
