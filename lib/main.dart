@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_app_todo/ui/home_page.dart';
 
@@ -20,3 +22,34 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => new _SplashScreenState();
+}
+class _SplashScreenState extends State<SplashScreen> {
+  startTime() async {
+    var _duration = new Duration(seconds: 5);
+    return new Timer(_duration, navigationPage);
+  }
+  void navigationPage() async {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (BuildContext ctx) => HomePage()));
+
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    startTime();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      // backgroundColor: Color(0xFF670e1e),
+      body: new Center(
+        child: Image.asset("assets/images/todo.png"),
+      ),
+    );
+  }
+}
